@@ -1,0 +1,80 @@
+/* line 6, ../scss/style.scss */
+html body .demo {
+  position: relative;
+  width: 300px;
+}
+/* line 10, ../scss/style.scss */
+html body .demo ul {
+  padding: 0;
+}
+/* line 14, ../scss/style.scss */
+html body .demo .page {
+  counter-increment: step;
+}
+/* line 17, ../scss/style.scss */
+html body .demo .page:nth-child(6n+1) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #5d7991), color-stop(100%, #314a6a));
+  background-image: -webkit-linear-gradient(left top, #5d7991, #314a6a);
+  background-image: -moz-linear-gradient(left top, #5d7991, #314a6a);
+  background-image: -o-linear-gradient(left top, #5d7991, #314a6a);
+  background-image: linear-gradient(left top, #5d7991, #314a6a);
+}
+/* line 20, ../scss/style.scss */
+html body .demo .page:nth-child(6n+2) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #7fa4a0), color-stop(100%, #54817c));
+  background-image: -webkit-linear-gradient(left top, #7fa4a0, #54817c);
+  background-image: -moz-linear-gradient(left top, #7fa4a0, #54817c);
+  background-image: -o-linear-gradient(left top, #7fa4a0, #54817c);
+  background-image: linear-gradient(left top, #7fa4a0, #54817c);
+}
+/* line 23, ../scss/style.scss */
+html body .demo .page:nth-child(6n+3) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #555d92), color-stop(100%, #1f246a));
+  background-image: -webkit-linear-gradient(left top, #555d92, #1f246a);
+  background-image: -moz-linear-gradient(left top, #555d92, #1f246a);
+  background-image: -o-linear-gradient(left top, #555d92, #1f246a);
+  background-image: linear-gradient(left top, #555d92, #1f246a);
+}
+/* line 26, ../scss/style.scss */
+html body .demo .page:nth-child(6n+4) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #6a4b69), color-stop(100%, #54143c));
+  background-image: -webkit-linear-gradient(left top, #6a4b69, #54143c);
+  background-image: -moz-linear-gradient(left top, #6a4b69, #54143c);
+  background-image: -o-linear-gradient(left top, #6a4b69, #54143c);
+  background-image: linear-gradient(left top, #6a4b69, #54143c);
+}
+/* line 29, ../scss/style.scss */
+html body .demo .page:nth-child(6n+5) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #53735b), color-stop(100%, #345432));
+  background-image: -webkit-linear-gradient(left top, #53735b, #345432);
+  background-image: -moz-linear-gradient(left top, #53735b, #345432);
+  background-image: -o-linear-gradient(left top, #53735b, #345432);
+  background-image: linear-gradient(left top, #53735b, #345432);
+}
+/* line 32, ../scss/style.scss */
+html body .demo .page:nth-child(6n) {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #6b4f43), color-stop(100%, #492012));
+  background-image: -webkit-linear-gradient(left top, #6b4f43, #492012);
+  background-image: -moz-linear-gradient(left top, #6b4f43, #492012);
+  background-image: -o-linear-gradient(left top, #6b4f43, #492012);
+  background-image: linear-gradient(left top, #6b4f43, #492012);
+}
+
+/* line 40, ../scss/style.scss */
+.page {
+  padding: 20px 0;
+}
+/* line 43, ../scss/style.scss */
+.page .content {
+  text-align: center;
+}
+/* line 46, ../scss/style.scss */
+.page .content .step-number {
+  margin: 10px;
+  font-size: 72px;
+  color: #ffffff;
+}
+/* line 51, ../scss/style.scss */
+.page .content .step-number:before {
+  content: counter(step);
+}

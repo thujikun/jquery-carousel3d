@@ -1,0 +1,56 @@
+@import "compass/css3";
+
+html {
+
+    body {
+        .demo {
+            position: relative;
+            width: 300px;
+
+            ul {
+                padding: 0;
+            }
+
+            .page {
+                counter-increment: step;
+
+                &:nth-child(6n+1) {
+                    @include background-image(linear-gradient(left top, #5d7991, #314a6a));
+                }
+                &:nth-child(6n+2) {
+                    @include background-image(linear-gradient(left top, #7fa4a0, #54817c));
+                }
+                &:nth-child(6n+3) {
+                    @include background-image(linear-gradient(left top, #555d92, #1f246a));
+                }
+                &:nth-child(6n+4) {
+                    @include background-image(linear-gradient(left top, #6a4b69, #54143c));
+                }
+                &:nth-child(6n+5) {
+                    @include background-image(linear-gradient(left top, #53735b, #345432));
+                }
+                &:nth-child(6n) {
+                    @include background-image(linear-gradient(left top, #6b4f43, #492012));
+                }
+            }
+        }
+    }
+}
+
+.page {
+    padding: 20px 0;
+
+    .content {
+        text-align: center;
+
+        .step-number {
+            margin: 10px;
+            font-size: 72px;
+            color: #ffffff;
+
+            &:before {
+                content: counter(step);
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import "compass/css3";
+
+@mixin transition($properties) {
+    -webkit-transition: $properties;
+       -moz-transition: $properties;
+        -ms-transition: $properties;
+         -o-transition: $properties;
+            transition: $properties;
+}
+
+@mixin transform($properties) {
+    -webkit-transform: $properties;
+       -moz-transform: $properties;
+        -ms-transform: $properties;
+         -o-transform: $properties;
+            transform: $properties;
+}
+
+@mixin transform-style($val) {
+    -webkit-transform-style: $val;
+       -moz-transform-style: $val;
+        -ms-transform-style: $val;
+         -o-transform-style: $val;
+            transform-style: $val;
+}
+
+@mixin perspective($val) {
+    -webkit-perspective: $val;
+    -moz-perspective: $val;
+    -o-perspective: $val;
+    -ms-perspective: $val;
+    perspective: $val;
+}
+
+@mixin js-carousel3d {
+        position: absolute;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+        cursor: pointer;
+}
+
+.carousel3d-ancestor {
+    height: 100%;
+    position: relative;
+
+    .carousel3d-indicator {
+        @include display-box;
+        @include box-pack(center);
+
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+
+        li {
+            @include opacity(0.8);
+
+            width: 8px;
+            height: 8px;
+            margin: 0 10px;
+            background-color: #888888;
+            border-radius: 50%;
+
+            &.active {
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    .js-carousel3d-prev {
+        @include js-carousel3d;
+
+        left: 0;
+    }
+
+    .js-carousel3d-next {
+        @include js-carousel3d;
+
+        right: 0;
+    }
+}
+
+.carousel3d-parent {
+    height: 100%;
+    @include perspective(400px);
+
+    .carousel3d-wrapper {
+        height: 100%;
+        @include transform-style(preserve-3d);
+
+        .carousel3d {
+            @include transform(rotateY(0));
+            @include transform-style(preserve-3d);
+            @include transition(all 2s ease-out);
+
+            position: relative;
+
+            .carousel3d-list {
+                @include transform-style(preserve-3d);
+
+                position: absolute;
+            }
+        }
+    }
+}

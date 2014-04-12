@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Carousel 3D</title>
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel3d.css">
+</head>
+<body>
+    <div class="pure-g-r" id="layout">
+        <nav class="pure-u" id="menu">
+            <div class="pure-menu pure-menu-open">
+                <a href="#top" class="pure-menu-heading">Carousel3D</a>
+                <ul>
+                    <li><a href="#options">Options</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                </ul>
+            </div>
+            <!-- /.pure-menu pure-menu-open -->
+        </nav>
+        <!-- /#menu -->
+
+        <main class="pure-u" id="main">
+            <header class="header pure-u-1">
+                <h1 class="pure-u-1">Carousel3D</h1>
+            </header>
+            <!-- /.header -->
+
+            <article id="top" class="content content-item-selected">
+                 <h2>This plugin enables you to create 3D carousel easily!</h2>
+                 <section class="demo">
+                    <ul id="sample1">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                 </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample1').carousel3d();
+                    </code>
+                 </pre>
+
+            </article>
+            <!-- /#top -->
+
+            <article id="options" class="content">
+                <h2>Options</h2>
+                <table class="pure-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Parameter</th>
+                            <th>Default</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="pure-table-odd">
+                            <td>1</td>
+                            <td><a class="smooth-scroll" href="#option-perspective">perspective</a></td>
+                            <td>500</td>
+                            <td>
+                                Specify carousel's perspective value.<br>
+                                The smaller value is, the more carousel looks three-dimensional.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td><a class="smooth-scroll" href="#option-duration">duration</a></td>
+                            <td>1000</td>
+                            <td>Time of transition.</td>
+                        </tr>
+
+                        <tr class="pure-table-odd">
+                            <td>3</td>
+                            <td><a class="smooth-scroll" href="#option-width">width</a></td>
+                            <td>null*</td>
+                            <td>
+                                Carousel width.<br>
+                                * In the default case, specified the elements width automatically.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td><a class="smooth-scroll" href="#option-progress">progress</a></td>
+                            <td>true</td>
+                            <td>
+                                The flag for displaying indicator or not.<br>
+                                When it's true, display indicator.<br>
+                                When it's false, not display.
+                            </td>
+                        </tr>
+
+                        <tr class="pure-table-odd">
+                            <td>5</td>
+                            <td><a class="smooth-scroll" href="#option-controller">controller</a></td>
+                            <td>true</td>
+                            <td>
+                                The flag for displaying contoroller or not.<br>
+                                When it's true, display controller.<br>
+                                When it's false, not display.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td><a class="smooth-scroll" href="#option-prev-text">prevText</a></td>
+                            <td>prev</td>
+                            <td>
+                                Text for prev controller.
+                            </td>
+                        </tr>
+
+                        <tr class="pure-table-odd">
+                            <td>7</td>
+                            <td><a class="smooth-scroll" href="#option-next-text">nextText</a></td>
+                            <td>next</td>
+                            <td>
+                                Text for next controller.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="option-perspective">perspective</h3>
+                <section class="demo">
+                    <ul id="sample2">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample2').carousel3d( {
+    perspective: 1500
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-duration">duration</h3>
+                <section class="demo">
+                    <ul id="sample3">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample3').carousel3d( {
+    duration: 5000
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-width">width</h3>
+                <section class="demo">
+                    <ul id="sample4">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample4').carousel3d( {
+    width: 800
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-progress">progress</h3>
+                <section class="demo">
+                    <ul id="sample5">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample5').carousel3d( {
+    progress: false
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-controller">controller</h3>
+                <section class="demo">
+                    <ul id="sample6">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample6').carousel3d( {
+    controller: false
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-prev-text">prevText</h3>
+                <section class="demo">
+                    <ul id="sample7">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample7').carousel3d( {
+    prevText: '前へ'
+});
+                    </code>
+                 </pre>
+
+                <h3 id="option-next-text">nextText</h3>
+                <section class="demo">
+                    <ul id="sample8">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample7').carousel3d( {
+    nextText: '次へ'
+});
+                    </code>
+                 </pre>
+
+            </article>
+            <!-- /#options -->
+
+            <article id="methods" class="content">
+                <h2>Methods</h2>
+                <table class="pure-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>name</th>
+                            <th>Parameter</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="pure-table-odd">
+                            <td>1</td>
+                            <td><a class="smooth-scroll" href="#method-next">next</a></td>
+                            <td>none</td>
+                            <td>
+                                Move to next list.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td><a class="smooth-scroll" href="#method-prev">prev</a></td>
+                            <td>none</td>
+                            <td>
+                                Move to prev list.
+                            </td>
+                        </tr>
+
+                        <tr class="pure-table-odd">
+                            <td>3</td>
+                            <td><a class="smooth-scroll" href="#method-move">move</a></td>
+                            <td>index{Number}</td>
+                            <td>
+                                Move to specified list.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td><a class="smooth-scroll" href="#method-refresh">refresh</a></td>
+                            <td>options{Object}</td>
+                            <td>
+                                Refresh with new options
+                            </td>
+                        </tr>
+
+                        <tr class="pure-table-odd">
+                            <td>5</td>
+                            <td><a class="smooth-scroll" href="#method-destroy">destroy</a></td>
+                            <td>none</td>
+                            <td>
+                                Destroy 3D carousel.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="method-next">next</h3>
+                <section class="demo">
+                    <ul id="sample7">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="method-next-btn" class="pure-button pure-button-primary mt-20">Next!!!!!</a>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample7').carousel3d('next');
+                    </code>
+                 </pre>
+
+                <h3 id="method-prev">prev</h3>
+                <section class="demo">
+                    <ul id="sample8">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="method-prev-btn" class="pure-button pure-button-primary mt-20">Prev!!!!!</a>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample7').carousel3d('prev');
+                    </code>
+                 </pre>
+
+                <h3 id="method-move">move</h3>
+                <section class="demo">
+                    <ul id="sample9">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="method-move-btn" class="pure-button pure-button-primary mt-20">Move to 8th!!!!!</a>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample7').carousel3d('move', 8);
+                    </code>
+                 </pre>
+
+                <h3 id="method-refresh">refresh</h3>
+                <section class="demo">
+                    <ul id="sample10">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="method-refresh-btn" class="pure-button pure-button-primary mt-20">Refresh!!!</a>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample10').carousel3d('refresh', {
+    perspective: 800,
+    duration: 100,
+    width: 200,
+    progress: false
+});
+                    </code>
+                 </pre>
+
+                <h3 id="method-destroy">destroy</h3>
+                <section class="demo">
+                    <ul id="sample11">
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                        <li class="page">
+                            <div class="content">
+                                <div class="step-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="method-destroy-btn" class="pure-button pure-button-primary mt-20">Destroy!!!</a>
+                </section>
+                 <pre class="snippet" data-language="javascript">
+                    <code>
+$('#sample11').carousel3d('destroy');
+                    </code>
+                 </pre>
+            </article>
+            <!-- /#methods -->
+
+        </main>
+        <!-- /#main -->
+    </div>
+    <!-- /#layout -->
+
+    <script src="http:////ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http:////ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/jquery-carousel3d-1.0.0.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
