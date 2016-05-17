@@ -45,8 +45,8 @@
     position: relative;
 
     .carousel3d-indicator {
-        @include display-box;
-        @include box-pack(center);
+        @include display-flex;
+        @include justify-content(center);
 
         position: absolute;
         bottom: 15px;
@@ -100,7 +100,6 @@
 
             .carousel3d-list {
                 @include transform-style(preserve-3d);
-
                 position: absolute;
             }
         }

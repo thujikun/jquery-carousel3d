@@ -142,6 +142,19 @@
                     transform: 'rotateY('+ (deg * (i)) +'deg) translateZ('+ translateZ +'px)'
                 });
             });
+            if ($list.length === 1) {
+                $wrapper.css({
+                    transform: 'translateZ(0)'
+                });
+                $list.css({
+                    transform: 'translateZ(0)'
+                });
+            }else if ($list.length === 2) {
+                $list.eq(1).css({
+                    transform: 'translateZ(-1px)'
+                });
+            }
+
 
             this._setIndicator();
 

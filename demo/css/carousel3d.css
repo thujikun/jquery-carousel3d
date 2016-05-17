@@ -5,14 +5,10 @@
 }
 /* line 47, ../scss/carousel3d.scss */
 .carousel3d-ancestor .carousel3d-indicator {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  box-pack: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: absolute;
   bottom: 15px;
   width: 100%;
